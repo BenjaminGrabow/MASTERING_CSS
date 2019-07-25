@@ -5,14 +5,14 @@ import './App.css';
 
 const StyledApp = styled.div`
 margin: 0;
-padding: 0;
+padding: 30px;
 box-sizing: border-box;
-font-family: "Lato", sans-serif;
+font-family: 'Lato', sans-serif;
 font-weight: 400;
 font-size: 16px;
 line-height: 1.7;
 color: #777; 
-`;
+`; 
 
 function App() {
   return (
