@@ -98,6 +98,7 @@ padding: 15px 40px;
 display: inline-block;
 border-radius: 100px;
 transition: all .2s;
+position: relative;
 }
 
 .btn:hover {
@@ -112,6 +113,26 @@ transition: all .2s;
 .btn-white {
   background-color: #fff;
   color: #777;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.btn-white::after {
+background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scale(1.5);
 }
 `;
 
