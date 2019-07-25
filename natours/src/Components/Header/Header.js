@@ -33,6 +33,7 @@ transform: translate(-50%, -50%);
 .heading-primary {
 color: #fff;
 text-transform: uppercase;
+backface-visibility: hidden;
 }
 
 .heading-primary-main {
@@ -40,6 +41,11 @@ display: block;
 font-size: 60px;
 font-weight: 400;
 letter-spacing: 35px;
+animation-name: moveInLeft;
+animation-duration: 1s;
+animation-timing-function: ease-out;
+/* animation-delay: 3s; */
+/* animation-iteration-count: 3; */
 }
 
 .heading-primary-sub {
@@ -47,7 +53,40 @@ letter-spacing: 35px;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 17.4px;
+  animation: moveInRight 1s ease-out;
 
+}
+
+@keyframes moveInLeft {
+  0% {
+   opacity: 0;
+   transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);  
+  }
+
+  100% {
+   opacity: 1;
+   transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+   opacity: 0;
+   transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);  
+  }
+
+  100% {
+   opacity: 1;
+   transform: translateX(0);
+  }
 }
 `;
 
