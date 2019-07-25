@@ -28,12 +28,14 @@ position: absolute;
 top: 40%;
 left: 50%;
 transform: translate(-50%, -50%);
+text-align: center;
 }
 
 .heading-primary {
 color: #fff;
 text-transform: uppercase;
 backface-visibility: hidden;
+margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -88,6 +90,29 @@ animation-timing-function: ease-out;
    transform: translateX(0);
   }
 }
+
+.btn:link, .btn:visited {
+text-transform: uppercase;
+text-decoration: none;
+padding: 15px 40px;
+display: inline-block;
+border-radius: 100px;
+transition: all .2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
 `;
 
 const Header = () => {
@@ -102,6 +127,8 @@ const Header = () => {
           <span className="heading-primary-main">Outdoors</span>
           <span className="heading-primary-sub">is where life happens</span>
         </h1>
+
+        <a href="#" className="btn btn-white">Discover our Tours</a>
       </div>
     </StyledHeader>
 
