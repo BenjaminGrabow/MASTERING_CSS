@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../../img/hero.jpg';
+import Logo from '../../img/logo-white.png';
 import styled from 'styled-components';
 
 const StyledHeader = styled.header`
@@ -9,16 +10,62 @@ background-image: linear-gradient(
    url(${Hero});
 background-size: cover;
 background-position: top;
-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%)
+clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+position: relative;
 
+.logo-box {
+position: absolute;
+top: 40px;
+left: 40px;
+}
+
+.logo {
+height: 35px;
+}
+
+.text-box {
+position: absolute;
+top: 40%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+color: #fff;
+text-transform: uppercase;
+}
+
+.heading-primary-main {
+display: block;
+font-size: 60px;
+font-weight: 400;
+letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 17.4px;
+
+}
 `;
 
 const Header = () => {
   return (
     <StyledHeader>
-<h1>HEELLLLLLLLLLLO</h1>
+      <div className="logo-box">
+        <img className="logo" src={Logo} alt="Logo" />
+      </div>
+
+      <div className="text-box">
+        <h1 className="heading-primary">
+          <span className="heading-primary-main">Outdoors</span>
+          <span className="heading-primary-sub">is where life happens</span>
+        </h1>
+      </div>
     </StyledHeader>
-  
+
   );
 }
 
