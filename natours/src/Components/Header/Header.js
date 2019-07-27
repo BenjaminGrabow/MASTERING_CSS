@@ -91,6 +91,18 @@ animation-timing-function: ease-out;
   }
 }
 
+@keyframes moveInFromBottom {
+  0% {
+   opacity: 0;
+   transform: translateY(30px);
+  }
+
+  100% {
+   opacity: 1;
+   transform: translateY(0);
+  }
+}
+
 .btn:link, .btn:visited {
 text-transform: uppercase;
 text-decoration: none;
@@ -133,8 +145,13 @@ background-color: #fff;
 }
 
 .btn:hover::after {
-  transform: scale(1.5);
+  transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInFromBottom .5s ease-out .75s;
+  animation-fill-mode: backwards;
 }
 `;
 
@@ -151,7 +168,7 @@ const Header = () => {
           <span className="heading-primary-sub">is where life happens</span>
         </h1>
 
-        <a href="#" className="btn btn-white">Discover our Tours</a>
+        <a href="#" className="btn btn-white btn-animated">Discover our Tours</a>
       </div>
     </StyledHeader>
 
