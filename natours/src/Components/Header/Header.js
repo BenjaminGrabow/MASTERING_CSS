@@ -125,6 +125,7 @@ position: relative;
   top: 0;
   left: 0;
   z-index: -1;
+  transition: all .4s;
 }
 
 .btn-white::after {
@@ -133,6 +134,7 @@ background-color: #fff;
 
 .btn:hover::after {
   transform: scale(1.5);
+  opacity: 0;
 }
 `;
 
