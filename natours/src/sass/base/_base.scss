@@ -1,0 +1,16 @@
+@import '../abstracts/variables.scss';
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin     : 0;
+  font-family: "Lato", sans-serif;
+  line-height: 1.7;
+  color      : $color-grey-dark;
+  padding    : 3rem;
+  box-sizing : border-box;
+  margin     : 0;
+  font-weight: 400;
+}
