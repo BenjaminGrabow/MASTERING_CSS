@@ -11,7 +11,7 @@ class Navigation extends React.Component {
        <input 
        type="checkbox"
         className="navigation__checkbox"
-      id="navi-toogle"/>
+      id="navi-toggle"/>
 
       <label className="navigation__button" for="navi-toggle" >MENU</label>
 
@@ -22,23 +22,23 @@ class Navigation extends React.Component {
         <ul className="navigation__list">
           <li className="navigation__item">
             <a href="#"
-             className="navigation__link">About Natours</a></li>
+             className="navigation__link"><span>1</span>About Natours</a></li>
 
 <li className="navigation__item">
             <a href="#"
-             className="navigation__link">Your benefits</a></li>
+             className="navigation__link"><span>2</span>Your benefits</a></li>
 
 <li className="navigation__item">
             <a href="#"
-             className="navigation__link">Popular tours</a></li>
+             className="navigation__link"><span>3</span>Popular tours</a></li>
 
 <li className="navigation__item">
             <a href="#"
-             className="navigation__link">Stories</a></li>
+             className="navigation__link"><span>4</span>Stories</a></li>
 
 <li className="navigation__item">
             <a href="#"
-             className="navigation__link">Book now</a></li>
+             className="navigation__link"><span>5</span>Book now</a></li>
         </ul>
       </nav>
       </div>
